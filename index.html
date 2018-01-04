@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <title>Kiulap Neighborhood Map</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content='Gerald Goh' name='Author' />
+    <meta content='Description' name='Neighborhood Map of Kiulap' />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body>
+    <div id="search">
+      <h4>Kiulap Neighborhood Map</h4>
+       <input class="form-control" placeholder="Search" data-bind="textInput: filter" type="text" />
+        <div>
+          <ul id="menu" data-bind="foreach: filteredVenues">
+            <li data-bind="text: title,click: $parent.setLocale"></li>
+          </ul>
+        </div>
+    </div>
+    <div id='map'></div>
+<!-- Javascripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script type="text/javascript" src="js/mapstyles.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/source.js"></script>
+<!-- Google Map Script -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE5O2RkGKfoHcOJt3JFg4ayHVizN7Dmgk&callback=initMap" onerror="gMapsError()"></script>
+</body>
+</html>
